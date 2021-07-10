@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import firebase from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAR1HXvyEqt_wv4uy9eEdMCJ35OD0Kah50",
-  authDomain: "hgentry.firebaseapp.com",
-  projectId: "hgentry",
-  storageBucket: "hgentry.appspot.com",
-  messagingSenderId: "962579619586",
-  appId: "1:962579619586:web:b22e12113fd75c442cac1b",
-  measurementId: "G-5T3M4J5EX8",
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STRAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
 firebase.initializeApp(firebaseConfig);
 
